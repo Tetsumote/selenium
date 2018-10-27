@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selenium</title>
+</head>
+<body>
+    <h1>Selenium</h1>
+    {% if user.is_authenticated %} 
+    {{ user.username }}
+    <a href="{% url 'logout' %}">logout</a>
+    {% else %} 
+    <a href="{% url 'login' %}">login</a>
+    {% endif %}
+</body>
+</html>
